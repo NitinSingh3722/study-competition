@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="leaderboard.css">
+  </head>
+  <body>
+    <div style="padding: 0%; margin-bottom:5%;" class="main">
+      <div id="leaderboard-container">
+        <h2><i class="fas fa-trophy"></i> Leaderboard</h2>
+        <img class="imgleader"  src="images/leader.png" alt="" srcset="">
+        <div class="leaderboard-controls">
+          <div class="form-group">
+            <label for="leaderboardType">Filter by:</label>
+            <select id="leaderboardType">
+              <option value="city">City</option>
+              <option value="college">College</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="filterValue" placeholder="Enter city or college">
+          </div>
+          <button id="leaderboardBtn"><i class="fas fa-search"></i> Show Leaderboard</button>
+        </div>
+        <div id="leaderboard"></div>
+      </div>
+    </div>
+    
+    <script src="leaderboard.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section id="auth" class="auth">
+      <div class="auth-container">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Login</button>
+          <button class="auth-tab" data-tab="register">Register</button>
+        </div>
+        <div class="auth-content">
+          <form id="login-form" class="auth-form active">
+            <h2>Login</h2>
+            <div class="input">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email</label>
+            </div>
+            <div class="input">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Password</label>
+            </div>
+            <button class="bttn" type="submit">Login</button>
+          </form>
+          <form id="register-form" class="auth-form">
+            <h2>Create Account</h2>
+            <div class="input">
+              <input type="text" id="register-name" required />
+              <label for="register-name">Name</label>
+            </div>
+            <div class="input">
+              <input type="email" id="register-email" required />
+              <label for="register-email">Email</label>
+            </div>
+            <div class="input">
+              <input type="password" id="register-password" required />
+              <label for="register-password">Password</label>
+            </div>
+            <div class="input">
+              <input type="text" id="register-college" required />
+              <label for="register-college">College</label>
+            </div>
+            <div class="input">
+              <input type="text" id="register-city" required />
+              <label for="register-city">City</label>
+            </div>
+            <button class="bttn" type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>

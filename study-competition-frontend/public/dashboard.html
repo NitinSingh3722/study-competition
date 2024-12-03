@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖥Study Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dash.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">StudyComp</div>
+        <div class="navbar-menu">
+            <span id="user-name"></span>
+            <button id="profile-btn" class="nav-btn">Profile</button>
+            <button id="report-btn" class="nav-btn">Report</button>
+            <button id="logout-btn" class="nav-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="main">
+        <h1><i class="fas fa-graduation-cap"></i> Study Dashboard</h1>
+
+        <div class="container">
+            <div id="timer">
+                <div class="mode-toggle">
+                    <button class="mode-btn active" id="work-btn">Work</button>
+                    <button class="mode-btn" id="break-btn">Break</button>
+                </div>
+                <div class="timer-circle">
+                    <div id="timer-display">25:00</div>
+                </div>
+                <button id="start-timer" class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+
+            <form id="study-form">
+                <h2><i class="fas fa-book"></i> Log Study Session</h2>
+                <div class="form-group">
+                    <label for="topic"><i class="fas fa-tag"></i> Topic:</label>
+                    <input type="text" id="topic" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration"><i class="fas fa-clock"></i> Duration (minutes):</label>
+                    <input type="number" id="duration" required>
+                </div>
+                <div class="form-group">
+                    <label for="break-time"><i class="fas fa-coffee"></i> Break Time (minutes):</label>
+                    <input type="number" id="break-time" required>
+                </div>
+                <button type="submit"><i class="fas fa-play-circle"></i> Start Study Session</button>
+            </form>
+        </div>
+
+        <div id="leaderboard-container">
+            <h2><i class="fas fa-trophy"></i>  <a href="leaderBoard.html">Leaderboard</a></h2>
+            
+            <!-- <div class="leaderboard-controls">
+                <div class="form-group">
+                    <label for="leaderboardType">Filter by:</label>
+                    <select id="leaderboardType">
+                        <option value="city">City</option>
+                        <option value="college">College</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="filterValue" placeholder="Enter city or college">
+                </div>
+                <button id="leaderboardBtn"><i class="fas fa-search"></i> Show Leaderboard</button>
+            </div>
+            <div id="leaderboard"></div> -->
+        </div>
+
+        <!-- Add this new section for the report modal -->
+        <div id="report-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Study Report</h2>
+                <div id="report-content"></div>
+            </div>
+        </div>
+
+        <!-- Profile modal -->
+        <div id="profile-modal" class="modal">
+            <div class="modal-content profile-content">
+                <span class="close">&times;</span>
+                <div class="profile-header">
+                    <i class="fas fa-user-circle profile-icon"></i>
+                    <h2>User Profile</h2>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-item">
+                        <i class="fas fa-user"></i>
+                        <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>City:</strong> <span id="profile-city"></span></p>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fas fa-university"></i>
+                        <p><strong>College:</strong> <span id="profile-college"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
